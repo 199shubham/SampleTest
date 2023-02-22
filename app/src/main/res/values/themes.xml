@@ -1,0 +1,111 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Sample" parent="Theme.MaterialComponents.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorPrimaryVariant">@color/yellow</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/green</item>
+        <item name="colorSecondaryVariant">@color/yellow</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
+        <!-- Customize your theme here. -->
+        <item name="buttonStyle">@style/Theme.Sample.Button</item>
+        <item name="android:buttonStyle">@style/Theme.Sample.Button1</item>
+        <item name="android:font" tools:targetApi="o">@font/poppins_reg</item>
+        <item name="android:editTextStyle">@style/App_EditTextStyle</item>
+        <item name="editTextStyle">@style/App_EditTextStyle</item>
+        <item name="android:checkboxStyle">@style/JMCheckBox</item>
+        <item name="checkboxStyle">@style/JMCheckBox</item>
+        <item name="textInputStyle">@style/App_TILTextStyle</item>
+        <item name="colorControlNormal">@color/line_color</item>
+        <item name="colorControlActivated">@color/green</item>
+        <item name="colorControlHighlight">@color/green</item>
+        <item name="floatingHintEditTextStyle">@style/Widget.FloatingHintEditText</item>
+    </style>
+
+    <style name="Theme.Sample.Button" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_bg_selector</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:font" tools:targetApi="o">@font/poppins_reg</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+
+    </style>
+
+    <style name="Theme.Sample.Button1" parent="Widget.MaterialComponents.Button">
+        <item name="android:background">@drawable/button_bg_selector</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:font" tools:targetApi="o">@font/poppins_reg</item>
+        <item name="textAllCaps">false</item>
+
+    </style>
+
+
+    <style name="App_TILTextStyle" parent="Widget.Design.TextInputLayout">
+        <item name="android:textColorHint">#8f8f8f</item>
+        <item name="android:textColor">#8f8f8f</item>
+        <item name="android:textSize">12sp</item>
+        <item name="boxStrokeWidth">2dp</item>
+        <item name="boxStrokeColor">#727272</item>
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="android:font" tools:targetApi="o">@font/poppins_reg</item>
+    </style>
+
+
+
+    <style name="App_EditTextStyle" parent="@android:style/Widget.EditText">
+        <item name="android:textColorHint">#808080</item>
+        <item name="android:textColor">#808080</item>
+        <item name="android:textSize">16sp</item>
+        <item name="hintTextColor">#808080</item>
+        <item name="android:paddingStart">2dp</item>
+        <item name="android:font" tools:targetApi="o">@font/poppins_reg</item>
+    </style>
+
+    <style name="JMCheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/img_check_box</item>
+        <item name="android:background">@null</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:font" tools:targetApi="o">@font/poppins_reg</item>
+        <item name="android:paddingStart">5dp</item>
+    </style>
+
+    <style name="TextShadowStyle">
+        <item name="android:shadowColor">@color/black_30</item>
+        <item name="android:shadowDy">20</item>
+        <item name="android:shadowRadius">5</item>
+    </style>
+
+    <style name="CustomCardCorners" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance_custom_corners</item>
+    </style>
+
+    <style name="ShapeAppearance_custom_corners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">100dp</item>
+        <item name="cornerSizeTopRight">100dp</item>
+    </style>
+    <style name="Widget"></style>
+
+    <style name="Widget.FloatingHintEditText" parent="App_EditTextStyle">
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingStart">2dp</item>
+    </style>
+
+    <style name="spinnerTheme" parent="@style/Widget.AppCompat.Spinner.Underlined">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/black</item>
+        <item name="android:textColor">@color/dialog_text_color</item>
+        <item name="android:background">@color/white</item>
+</style>
+</resources>

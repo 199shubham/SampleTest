@@ -1,0 +1,40 @@
+pluginManagement {
+    plugins{
+        id 'androidx.navigation'
+        id 'org.jetbrains.kotlin.android' version '1.7.0'
+        id 'com.google.dagger.hilt.android' version '2.41' apply false
+    }
+
+    resolutionStrategy {
+
+        eachPlugin {
+
+            if (requested.id.id == 'androidx.navigation') {
+                useModule("androidx.navigation:navigation-safe-args-gradle-plugin:2.3.5")
+            }
+            if( requested.id.id == 'dagger.hilt.android.plugin') {
+                useModule("com.google.dagger:hilt-android-gradle-plugin:2.41")
+            }
+        }
+    }
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+rootProject.name = "Sample"
+include ':app'
+include ':corelib'
