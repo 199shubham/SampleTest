@@ -31,7 +31,6 @@ abstract class BaseFragment<VM : BaseViewModel>() : Fragment(), AppNavigator {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        binding = DataBindingUtil.inflate(layoutInflater, layoutId, container, false)
     }
 
     override fun showError(_errorMsg: String) {
@@ -48,20 +47,7 @@ abstract class BaseFragment<VM : BaseViewModel>() : Fragment(), AppNavigator {
     override fun showToastMessage(msg: String) {
 
     }
-
-    fun showFieldError(container: ConstraintLayout, errorFieldId: Int, fieldId: Int?, error: String?) {
-        if(fieldId != null){
-            val set = ConstraintSet()
-            set.clone(container)
-            set.connect(errorFieldId, ConstraintSet.START, fieldId, ConstraintSet.START)
-            set.connect(errorFieldId, ConstraintSet.END, container.id,
-                ConstraintSet.END)
-            set.connect(errorFieldId, ConstraintSet.TOP, fieldId, ConstraintSet.BOTTOM)
-            set.applyTo(container)
-        }
-    }
-
     override fun showDialogMessage(msg: String) {
-        (requireActivity() as MainActivity).showDialog("Message", msg, "Okay", null, null, null, true)
+
     }
 }
