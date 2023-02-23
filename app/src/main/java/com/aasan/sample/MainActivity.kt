@@ -3,17 +3,19 @@ package com.aasan.sample
 
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.MutableLiveData
 import androidx.navigation.NavController
 import com.aasan.sample.base.*
 import com.aasan.sample.databinding.ActivityMainBinding
+
 import com.globalmed.corelib.repository.SharedPreferenceRepositoryImplementation
 import dagger.hilt.android.AndroidEntryPoint
 
 
 
 @AndroidEntryPoint
-class MainActivity : PermissionHandlerActivity() {
+class MainActivity : AppCompatActivity() {
     private val header = MutableLiveData<Header>()
     private lateinit var activityMainBinding: ActivityMainBinding
     val viewModel: BaseViewModel by viewModels()
@@ -23,7 +25,6 @@ class MainActivity : PermissionHandlerActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        registerPermissionHandlers()
         activityMainBinding = ActivityMainBinding.inflate(layoutInflater)
 
         activityMainBinding.frmProgress.setOnClickListener {  }
@@ -42,8 +43,4 @@ class MainActivity : PermissionHandlerActivity() {
         if(_header.currentFragment != 0)
             viewModel.updateDestination(_header.currentFragment)
     }
-
-
-
-
 }
