@@ -3,10 +3,10 @@
     <data>
         <variable
             name="selectedItem"
-            type="com.aasan.sample.Entry" />
+            type="com.aasan.sample.sample.data.Entry" />
         <variable
             name="item"
-            type="com.aasan.sample.Entry" />
+            type="com.aasan.sample.sample.data.Entry" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
